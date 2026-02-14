@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Will You Be My Valentine? ❤️</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #ff758c, #ff7eb3);
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 60px 20px;
+            color: white;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            font-size: 40px;
+        }
+
+        p {
+            font-size: 20px;
+            max-width: 700px;
+            margin: 30px auto;
+            line-height: 1.6;
+        }
+
+        .buttons {
+            margin-top: 30px;
+            position: relative;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 20px;
+            margin: 15px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        #yes {
+            background-color: #28a745;
+            color: white;
+        }
+
+        #no {
+            background-color: #dc3545;
+            color: white;
+            position: relative;
+        }
+
+        #musicBtn {
+            margin-top: 20px;
+            background-color: white;
+            color: #ff4d6d;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <audio id="jazz" loop>
+        <source src="https://www.bensound.com/bensound-music/bensound-jazzyfrenchy.mp3" type="audio/mpeg">
+    </audio>
+
+    <h1>Hbebaa 💕</h1>
+
+    <p>
+        From the moment you came into my life, everything started to feel brighter and more meaningful.
+        Your smile makes my bad days disappear, your voice is my favorite sound, and your presence is my favorite place.
+        You make me feel loved, understood, and inspired to be a better man every single day.
+        I don’t just like you — I truly admire you and care about you deeply.
+        Today, I just want to ask you something simple but important…
+    </p>
+
+    <h2>Will You Be My Valentine? 💘</h2>
+
+    <div class="buttons">
+        <button id="yes" onclick="yesClicked()">YES ❤️</button>
+        <button id="no" onmouseover="moveButton()">NO 😜</button>
+    </div>
+
+    <button id="musicBtn" onclick="playMusic()">🎷 Click for Romantic Jazz</button>
+
+    <script>
+        function playMusic() {
+            document.getElementById("jazz").play();
+            document.getElementById("musicBtn").style.display = "none";
+        }
+
+        function yesClicked() {
+            document.body.innerHTML = `
+                <h1> 💖</h1>
+                <h2>i love youu everyday not just today 🥰</h2>
+            `;
+        }
+
+        function moveButton() {
+            const button = document.getElementById("no");
+
+            const x = Math.random() * 200 - 100;
+            const y = Math.random() * 200 - 100;
+
+            button.style.transform = `translate(${x}px, ${y}px)`;
+        }
+    </script>
+
+</body>
+</html>
